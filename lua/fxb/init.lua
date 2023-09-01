@@ -32,3 +32,6 @@ require('onedark').setup {
     style = 'cool'
 }
 require('onedark').load()
+
+local neogit = require('neogit')
+neogit.setup {}

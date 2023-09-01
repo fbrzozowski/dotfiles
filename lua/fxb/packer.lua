@@ -42,6 +42,17 @@ return require('packer').startup(function(use)
   use 'freddiehaddad/feline.nvim'
   use 'nvim-tree/nvim-tree.lua'
 
+  use {
+      "NeogitOrg/neogit",
+      require = {
+          "nvim-lua/plenary.nvim",         -- required
+          "nvim-telescope/telescope.nvim", -- optional
+          "sindrets/diffview.nvim",        -- optional
+          "ibhagwan/fzf-lua",              -- optional
+      }
+  }
+
+
 
 --  use {
 --    "nvim-neo-tree/neo-tree.nvim",
