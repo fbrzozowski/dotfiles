@@ -1,3 +1,4 @@
 plugin/
 !after/**/*
+tmux/plugins
 
