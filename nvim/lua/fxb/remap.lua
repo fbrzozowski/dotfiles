@@ -28,8 +28,8 @@ vim.keymap.set("n", "<Tab>", "<C-w>w", { remap=false, silent=true })
 
 
 --tree
-vim.keymap.set("n", "<leader>tt", "<leader>:NvimTreeToggle<CR>", {silent = true})
-vim.keymap.set("n", "<leader>tf", "<leader>:NvimTreeFocus<CR>", {silent = true})
+vim.keymap.set("n", "<leader>tf", "<leader>:NvimTreeToggle<CR>", {silent = true})
+vim.keymap.set("n", "<leader>tt", "<leader>:NvimTreeFocus<CR>", {silent = true})
 vim.keymap.set("n", "<leader>tc", "<leader>:NvimTreeCollapse<CR>", {silent = true})
 
 --TODO
