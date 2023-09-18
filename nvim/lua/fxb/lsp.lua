@@ -25,7 +25,13 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
 
     -- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping(function ()
+      if cmp.visible() then
+        cmp.select_next_item(cmp_select_opts)
+        cmp.complete()
+      else
+      end
+    end),
 
     -- Navigate between snippet placeholder
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),

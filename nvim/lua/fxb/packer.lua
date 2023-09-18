@@ -51,7 +51,8 @@ return require('packer').startup(function(use)
           "ibhagwan/fzf-lua",              -- optional
       }
   }
- use 'christoomey/vim-tmux-navigator'
+  use 'christoomey/vim-tmux-navigator'
+  use 'mfussenegger/nvim-lint'
 
 
 --  use {
