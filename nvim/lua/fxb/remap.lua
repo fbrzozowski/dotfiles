@@ -39,6 +39,7 @@ vim.keymap.set("n", "<leader>tc", "<leader>:NvimTreeCollapse<CR>", {silent = tru
 vim.keymap.set("n", "<C-d>", "<C-d>zz>")
 vim.keymap.set("n", "<C-u>", "<C-u>zz>")
 
+vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 --treesitter code folding
 --vim.keymap.set("n", "<C-k>", ":foldclose<CR>", {silent=ture})
 --vim.keymap.set("n", "<C-j>", ":foldopen<CR>", {silent=ture})
