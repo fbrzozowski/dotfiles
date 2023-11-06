@@ -1,6 +1,8 @@
 require("fxb.remap")
 require("fxb.lsp")
 require("fxb.gitsigns")
+require("fxb.packer")
+require("fxb.harpoon")
 require("fxb.feline")
 require("fxb.nvim-tree")
 
