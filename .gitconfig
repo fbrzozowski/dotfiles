@@ -1,0 +1,3 @@
+[alias]
+hist = "log --pretty=format:'%C(#ff3333)%h%Creset | %C(#A0A0A0)%ad | %C(white)%s%Creset [%C(#99ccff)%an%Creset, %C(#66cc00)%cr%Creset]' --graph --date=format:'%d.%m.%Y'"
+
