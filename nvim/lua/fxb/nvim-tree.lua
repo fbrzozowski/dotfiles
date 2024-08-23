@@ -1,5 +1,6 @@
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  update_focused_file = { enable = true },
   view = {
     width = 50,
   },

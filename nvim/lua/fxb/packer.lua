@@ -55,5 +55,9 @@ return require('packer').startup(function(use)
  use 'christoomey/vim-tmux-navigator'
  use 'preservim/nerdcommenter'
  use 'mfussenegger/nvim-lint'
+ use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
 
 end)

@@ -1,4 +1,6 @@
 plugin/
 !after/**/*
 tmux/plugins
-
+nvim/packer.nvim.log
+nvim/harpoon
+nvim/plugin/packer_compiled.lua
