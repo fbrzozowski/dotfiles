@@ -1,4 +1,9 @@
-require('gitsigns').setup {
+local line_ok, autopairs = pcall(require, "gitsigns")
+if not line_ok then
+	return
+end
+
+gitsigns.setup {
   signs = {
     add          = { text = '│' },
     change       = { text = '│' },

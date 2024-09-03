@@ -1,2 +1,4 @@
-vim.opt.termguicolors = true
-require("fxb")
+require("plugins")
+require("options")
+require("mappings")
+

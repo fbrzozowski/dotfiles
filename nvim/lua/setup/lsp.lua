@@ -1,6 +1,10 @@
-local lsp = require('lsp-zero').preset({})
+local line_ok, lsp = pcall(require, "lsp-zero")
+if not line_ok then
+	return
+end
 
-lsp.on_attach(function(client, bufnr)
+-- local lsp lspp.preset({})
+lsp.preset({}).on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
 	lsp.default_keymaps({buffer = bufnr})
@@ -25,7 +29,7 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
 
     -- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping(function ()
+    ['<C-Tab>'] = cmp.mapping(function ()
       if cmp.visible() then
         cmp.select_next_item(cmp_select_opts)
         cmp.complete()
