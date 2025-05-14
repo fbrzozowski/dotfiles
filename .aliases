@@ -6,5 +6,7 @@ alias gl="git log $1"
 alias gp="git push $1"
 alias gpl="git pull $1"
 alias glgh="git hist"
-
-source ~/.aliases_work
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias cp="/usr/local/bin/advcp -g"
+alias mv="/usr/local/bin/advmv -g"
+alias vim="nvim"
