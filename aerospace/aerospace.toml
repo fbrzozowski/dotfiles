@@ -150,19 +150,22 @@ automatically-unhide-macos-hidden-apps = true
     shift-down = 'move down'
     shift-up = 'move up'
 
+    ctrl-alt-f = 'resize smart -100'
+    ctrl-alt-g = 'resize smart +100'
+
 
 [[on-window-detected]]
     if.app-id = 'com.googlecode.iterm2'
-    run = 'move-node-to-workspace M'
+    run = 'move-node-to-workspace 3'
 [[on-window-detected]]
     if.app-id = 'ch.protonmail.desktop'
-    run = 'move-node-to-workspace N'
+    run = 'move-node-to-workspace 3'
 [[on-window-detected]]
     if.app-id = 'com.jetbrains.intellij'
-    run = 'move-node-to-workspace M'
+    run = 'move-node-to-workspace 2'
 [[on-window-detected]]
     if.app-id = 'com.brave.Browser'
-    run = 'move-node-to-workspace M'
+    run = 'move-node-to-workspace 1'
 [[on-window-detected]]
     if.window-title-regex-substring = 'Collection Presentatino'
     run = 'layout floating'
