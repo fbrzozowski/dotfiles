@@ -3,6 +3,6 @@ if not line_ok then
 	return
 end
 onedark.setup {
-    style = 'cool'
+    style = 'cool',
 }
 onedark.load()

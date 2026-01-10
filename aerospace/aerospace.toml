@@ -10,7 +10,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 30
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
 
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -57,17 +57,9 @@ automatically-unhide-macos-hidden-apps = true
     #     activate
     # end tell'
     # '''
-
-     alt-t = '''exec-and-forget osascript -e '
-     tell application "iTerm"
-         do script
-         activate
-     end tell'
-     '''
+    ctrl-alt-t = 'exec-and-forget open -n /Applications/iTerm.app'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    alt-slash = 'layout tiles horizontal vertical'
-    alt-comma = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
@@ -89,8 +81,8 @@ automatically-unhide-macos-hidden-apps = true
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
     #alt-ctrl-keypadEqual = 'resize smart -50'
     #alt-ctrl-keypadMinus = 'resize smart +50'
-    ctrl-alt-f = 'resize smart -100'
-    ctrl-alt-g = 'resize smart +100'
+    ctrl-alt-f = 'resize smart -250'
+    ctrl-alt-g = 'resize smart +250'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
@@ -99,6 +91,9 @@ automatically-unhide-macos-hidden-apps = true
     alt-4 = 'workspace 4'
     alt-5 = 'workspace 5'
     alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -117,6 +112,11 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-semicolon = 'mode service'
     ctrl-alt-d = 'mode nav'
 
+    ctrl-shift-l = 'move right'
+    ctrl-shift-h = 'move left'
+    ctrl-shift-j = 'move down'
+    ctrl-shift-k = 'move up'
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -128,35 +128,36 @@ automatically-unhide-macos-hidden-apps = true
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
-
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
-
 [mode.nav.binding]
     esc = ['mode main']
 
-    left = 'focus left'
-    down = 'focus down'
-    up = 'focus up'
-    right = 'focus right'
+    shift-l = 'move right'
+    shift-h = 'move left'
+    shift-j = 'move down'
+    shift-k = 'move up'
 
-    shift-right = 'move right'
-    shift-left = 'move left'
-    shift-down = 'move down'
-    shift-up = 'move up'
+    l = 'focus right'
+    h = 'focus left'
+    j = 'focus down'
+    k = 'focus up'
 
     ctrl-alt-f = 'resize smart -100'
     ctrl-alt-g = 'resize smart +100'
 
+    shift-period = 'layout tiles horizontal vertical'
+    shift-comma = 'layout accordion horizontal vertical'
 
-[[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
-    run = 'move-node-to-workspace 1'
+    cmd-l='join-with right'
+    cmd-h='join-with left'
+    cmd-k='join-with up'
+    cmd-j='join-with down'
+
+    f='fullscreen'
+
+
+#[[on-window-detected]]
+    #if.app-id = 'com.googlecode.iterm2'
+    #run = 'move-node-to-workspace 1'
 [[on-window-detected]]
     if.app-id = 'ch.protonmail.desktop'
     run = 'move-node-to-workspace 3'
@@ -166,9 +167,6 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.brave.Browser'
     run = 'move-node-to-workspace 2'
-[[on-window-detected]]
-    if.window-title-regex-substring = 'Collection Presentatino'
-    run = 'layout floating'
 #[[on-window-detected]]
     ##if.window-title-regex-substring = 'Commit:\s.*'
     #if.app-id = 'com.jetbrains.intellij'

@@ -40,7 +40,7 @@ cmp.setup({
         -- scroll up and down the documentation window
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
-        ['<Tab>'] = cmp.mapping.confirm({ select = false }),
+        ['<cr>'] = cmp.mapping.confirm({ select = false }),
 
         -- Ctrl+Space to trigger completion menu
         ['<C-Tab>'] = cmp.mapping(function()

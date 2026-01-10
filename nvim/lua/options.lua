@@ -26,3 +26,15 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.mouse = alt
 
+
+vim.api.nvim_create_user_command("UUID", function()
+  local output = vim.fn.system({
+    "kotlin",
+    "-e",
+    "println(java.util.UUID.randomUUID())"
+  })
+
+  local uuid = output:gsub("%s+$", "")  -- discard 2nd return value
+  vim.api.nvim_put({ uuid }, "c", true, true)
+end, {})
+

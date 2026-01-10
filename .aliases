@@ -7,6 +7,5 @@ alias gp="git push $1"
 alias gpl="git pull $1"
 alias glgh="git hist"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-alias cp="/usr/local/bin/advcp -g"
-alias mv="/usr/local/bin/advmv -g"
 alias vim="nvim"
+alias uuid='kotlin -e "println(java.util.UUID.randomUUID())"'

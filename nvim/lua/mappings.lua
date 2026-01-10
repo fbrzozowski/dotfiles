@@ -39,7 +39,7 @@ vim.keymap.set("n", "T", ":TodoQuickFix<CR>", { silent = true })
 vim.keymap.set("n", "<C-d>", "<C-d>zz>")
 vim.keymap.set("n", "<C-u>", "<C-u>zz>")
 
-vim.keymap.set("n", "<Tab>", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "" })
+vim.keymap.set("n", "<cr>", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "" }) -- was tab
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -83,3 +83,4 @@ vim.keymap.set({ "n", "v" }, "<leader>l", function()
 		timeout_ms = 1000,
 	})
 end, { desc = "Format code (conform)" })
+

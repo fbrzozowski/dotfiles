@@ -8,7 +8,7 @@ tree.setup({
     git = { ignore = false },
     update_focused_file = { enable = true },
     view = {
-        width = 50,
+        width = 40,
     },
     renderer = {
         group_empty = true,

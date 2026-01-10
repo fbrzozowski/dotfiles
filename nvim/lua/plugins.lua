@@ -16,7 +16,7 @@ return require('packer').startup({function(use)
 
   use { 'folke/todo-comments.nvim', config = require("setup/todo-comments") }
   use { 'folke/which-key.nvim', config = require("setup/which-key") }
-  use { 'freddiehaddad/feline.nvim', config = require("setup/feline") }
+  --use { 'freddiehaddad/feline.nvim', config = require("setup/feline") }
   use { 'nvim-tree/nvim-tree.lua', config = require("setup/nvim-tree") }
   use { 'navarasu/onedark.nvim', config = require("setup/onedark") }
   use { 'lewis6991/gitsigns.nvim' } --, config = require("setup/gitsigns") }
