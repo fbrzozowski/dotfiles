@@ -9,7 +9,7 @@ return require('packer').startup({function(use)
   use 'mfussenegger/nvim-lint'
   use 'theprimeagen/harpoon'
   use 'nvim-tree/nvim-web-devicons'
-  use { 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate", config = require("setup/treesitter") }
+  use { 'nvim-treesitter/nvim-treesitter', branch = 'main', run = ":TSUpdate", config = require("setup/treesitter") }
   use { 'stevearc/conform.nvim', config = require("setup/conform") } 
   use {'j-hui/fidget.nvim', config = require("setup/fidget") }
 --  use 'rlane/pounce.nvim' TODO: Checkout 
@@ -22,8 +22,7 @@ return require('packer').startup({function(use)
   use { 'lewis6991/gitsigns.nvim' } --, config = require("setup/gitsigns") }
 
   use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.2',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+  'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use {
